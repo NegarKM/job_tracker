@@ -2,6 +2,7 @@ package com.thirty3.job.job_tracker.resources;
 
 import com.thirty3.job.job_tracker.model.JobDescriptionRepository;
 import com.thirty3.job.job_tracker.records.JobDescription;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ public class JobDescriptionController {
 	}
 
 	@PostMapping("/job-description")
-	public JobDescription add_job_description(@RequestBody JobDescription jobDescription) {
+	public JobDescription add_job_description(@Valid @RequestBody JobDescription jobDescription) {
 		return repository.save(jobDescription);
 	}
 }
