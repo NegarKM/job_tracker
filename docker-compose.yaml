@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_USER: springuser
+      MYSQL_PASSWORD: springpassword
+      MYSQL_ROOT_PASSWORD: springpassword
+      MYSQL_DATABASE: job_db
+    ports:
+      - "3306:3306"
