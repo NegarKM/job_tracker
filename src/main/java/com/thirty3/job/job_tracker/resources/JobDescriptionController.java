@@ -21,6 +21,7 @@ public class JobDescriptionController {
 
 	@PostMapping("/job-description")
 	public JobDescription add_job_description(@Valid @RequestBody JobDescription jobDescription) {
+		jobDescription.setStatus(JobDescription.Status.BOOKMARKED);
 		return repository.save(jobDescription);
 	}
 }
