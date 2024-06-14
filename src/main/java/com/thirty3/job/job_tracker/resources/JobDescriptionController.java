@@ -14,6 +14,11 @@ public class JobDescriptionController {
 	@Autowired
 	private JobDescriptionRepository repository;
 
+	@GetMapping("/job-description")
+	public Iterable<JobDescription> get_all_job_descriptions() {
+		return repository.findAll();
+	}
+
 	@GetMapping("/job-description/{id}")
 	public Optional<JobDescription> get_job_description(@PathVariable("id") long id) {
 		return repository.findById(id);
