@@ -31,6 +31,6 @@ public class JobDescription {
     private Status status;
 
     public enum Status {
-        BOOKMARKED, APPLYING, APPLIED, REJECTED, ARCHIVED
+        BOOKMARKED, APPLYING, APPLIED, INTERVIEWING, REJECTED, ARCHIVED
     }
 }
